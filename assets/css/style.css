@@ -44,3 +44,28 @@ h1 {
     text-align: center;
     padding: 25px;
 }
+
+.solicitaVuelo .venta{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.styleCard{
+    border-radius: 12px;
+    background: #dfe7fd;
+    /*background: rgb(144, 224, 239);*/
+}
+
+.card-border-text {
+    position: absolute;
+    top: -24px; /* Ajusta según el borde deseado (top, bottom, left, right) */
+    left: 12%;
+    transform: translateX(-50%); /* Centra horizontalmente el texto */
+    background: white;  /*Fondo blanco para que resalte sobre el borde */
+    padding: 0 5px; /* Ajusta el padding según lo necesites */
+    font-size: 24px; /* Tamaño del texto */
+    font-style: italic;
+    border: 1px solid transparent; /* Puede ajustarse para más definición */
+    border-radius: 8px;
+}

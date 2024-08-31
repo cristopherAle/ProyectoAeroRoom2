@@ -15,6 +15,7 @@ const vuelos = [
 ];
 
 
+
 function obtenerVuelosAleatorios(cantidad) {
     return vuelos
         .sort(() => Math.random() - 0.6)
@@ -26,9 +27,9 @@ function actualizarTablaVuelos() {
     const vuelosAleatorios = obtenerVuelosAleatorios(9);
 
     cuerpoTabla.innerHTML = '';
-var colorEstado = 'green'
-var colorLetra = 'black'
-var imgEstado = 'Abordando.svg'
+    var colorEstado = 'green'
+    var colorLetra = 'black'
+    var imgEstado = 'Abordando.svg'
 
     vuelosAleatorios.forEach(vuelo => {
 
@@ -77,6 +78,5 @@ var imgEstado = 'Abordando.svg'
     });
 }
 
-// Actualizar la tabla inicialmente y cada 30 segundos
 actualizarTablaVuelos();
 setInterval(actualizarTablaVuelos, 5000);
