@@ -89,13 +89,13 @@
                                             </div>
                                             <div class="col-3">
                                                 <div class="mb-2">
-                                                    <label for="fecha" class="form-label">Fecha ida</label>
+                                                    <label for="fechaida" class="form-label">Fecha ida</label>
                                                     <input type="date" class="form-control" id="fechaida">
                                                 </div>
                                             </div>
                                             <div class="col-3">
                                                 <div class="mb-2">
-                                                    <label for="fecha" class="form-label">Fecha vuelta</label>
+                                                    <label for="fechavuelta" class="form-label">Fecha vuelta</label>
                                                     <input type="date" class="form-control" id="fechavuelta">
                                                 </div>
                                             </div>
@@ -136,6 +136,14 @@
                         </div>
                     </section>
 
+            <!-- Script para bloquear días anteriores en los campos de fecha -->
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const today = new Date().toISOString().split("T")[0]; // Obtener la fecha actual en formato YYYY-MM-DD
+                    document.getElementById("fechaida").setAttribute("min", today);
+                    document.getElementById("fechavuelta").setAttribute("min", today);
+                });
+            </script>
                     <section>
                         <div class="card styleCard mt-5">
                             <div class="card-border-text">Vuelos disponibles</div>
@@ -215,6 +223,9 @@
 
 
                             </div>
+			    
+			    
+
                             <!-- Columna derecha -->
                             <div class="col-md-6">
                                 <h2 class="fondo">Tabla de Vuelos Aleatorios</h2>
